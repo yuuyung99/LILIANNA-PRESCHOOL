@@ -26,3 +26,72 @@ function trackEvent(
     );
 
 }
+//======================================
+// PHONE CLICK
+//======================================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        document
+            .querySelectorAll(
+                'a[href^="tel:"]'
+            )
+            .forEach(item => {
+
+                item.addEventListener(
+                    "click",
+                    () => {
+
+                        trackEvent(
+                            "phone_click"
+                        );
+
+                    }
+                );
+
+            });
+
+    }
+);
+
+
+//======================================
+// MESSENGER CLICK
+//======================================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        document
+            .querySelectorAll(
+                ".messenger-btn"
+            )
+            .forEach(item => {
+
+                item.addEventListener(
+                    "click",
+                    () => {
+
+                        trackEvent(
+                            "messenger_click"
+                        );
+
+                    }
+                );
+
+            });
+
+    }
+);
+
+
+
+
+
+
+
+
+
