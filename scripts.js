@@ -242,10 +242,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 //======================================
                 // SUCCESS
                 //======================================
-
                 if (
                     result.result === "success"
                 ) {
+
+                    trackEvent(
+                        "form_submit"
+                    );
 
                     form.reset();
 
